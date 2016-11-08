@@ -1,0 +1,514 @@
+
+/**
+* 2. html, body
+*/
+   body {
+       position: relative;
+       background-color: #ffffff;
+   }
+   .page {
+       color: #333333;
+       font-size: 14px;
+       line-height: 1.5;
+       font-family:'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
+   }
+
+   em {
+       font-style: normal;
+   }
+
+   /* opacity */
+   .opacity {
+       -webkit-transition: .5s;
+       transition: .5s;
+   }
+   .opacity:hover {
+       opacity: 0.7;
+   }
+
+@media only screen and (min-width: 0) {
+   img {
+       max-width: 100%;
+       height: auto;
+       vertical-align: bottom;
+   }
+}
+
+/**
+* 3. HTMLtag, siteCommonClass
+*/
+/* anchor */
+   a {
+       background-color: transparent;
+       text-decoration: none;
+       color: #000;
+       -webkit-transition: .5s;
+       transition: .5s;
+   }
+   a:visited {}
+   a:hover {
+       color: #545454;
+       background-position: bottom right;
+   }
+   a:active {}
+
+/* heading */
+   .seoTxt {
+       position: absolute;
+       left: 0;
+       bottom: 0;
+       padding: 15px;
+       width: 100%;
+       font-size: 10px;
+       box-sizing: border-box;
+       text-align: center;
+       background-color: #fff;
+       z-index: 100;
+   }
+   .siteTitle {
+       /*dont use <h1> selector*/
+   }
+   .contentTitle {
+       background: url(../imgs/bg-content-title.png) center top no-repeat;
+       -webkit-background-size: cover;
+       background-size: cover;
+   }
+   .contentTitle > .wrap {
+       -webkit-box-sizing: border-box;
+       box-sizing: border-box;
+       height: 243px;
+       padding-top: 129px;
+       text-align: center;
+   }
+
+/* cap */
+   .cap,
+   .caption {
+       background: none;
+       color: #666666;
+       font-size: 10px;
+       line-height: 15px;
+       font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+   }
+   .cap {
+       padding-top: 5px;
+   }
+
+/* common */
+   .opacity {
+       -webkit-transition: .5s;
+       transition: .5s;
+   }
+   .opacity:hover,
+   .linkOpacityArea a:hover {
+       filter: alpha( opacity=70 );
+       -ms-filter: "alpha( opacity=70 )";
+       opacity: 0.7;
+   }
+
+/**
+* 4. Layout
+*/
+   #container {
+   }
+   .wrap {
+       max-width: 960px;
+       margin-right: auto;
+       margin-left: auto;
+       -webkit-transition: .5s;
+       transition: .5s;
+   }
+
+
+#fNav .wrap {
+   max-width: 100%;
+}
+
+@media only screen and (max-width: 980px) {
+   .wrap {
+       padding-right: 10px;
+       padding-left: 10px;
+       box-sizing: border-box;
+   }
+}
+
+#main {
+    padding-top: 72px;
+    background-image: url(../../images/common/background01.png);
+    background-position: center;
+    background-size: cover;
+}
+
+#header {
+    width: 100%;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    padding: 25px 0;
+}
+
+#header .wrap {
+    position: relative;
+}
+
+#gNav {
+    position: absolute;
+    top: -8px;
+    right: 10px;
+}
+
+#gNav ul {
+    letter-spacing: -.4em;
+}
+
+#gNav li {
+    letter-spacing: normal;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+}
+
+#gNav li:hover:after {
+    transform: scaleX(1);
+}
+
+#gNav li:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    /* border-bottom: solid 2px; */
+    width: 100%;
+    height: 2px;
+    background-color: #cacaca;
+    transform: scaleX(0);
+    transition: 0.5s;
+}
+
+#gNav a {
+    display: block;
+    color: #484848;
+    letter-spacing: 2px;
+    font-weight: 600;
+    padding: 10px 15px;
+}
+
+#gNav a:hover {
+    color: #ababab;
+}
+
+#gNav #cart {
+    font-size: 25px;
+    border-radius: 6px;
+    padding: 0;
+    margin-left: 20px;
+}
+
+#gNav #cart:after {
+    height: 0;
+}
+
+#gNav #cart a {
+    padding: 8px 9px 8px 8px;
+    transition: 0.5s;
+}
+
+#gNav #cart a:hover {
+    color: #ababab;
+}
+
+
+#gNav #gMenubar {
+    font-size: 25px;
+    padding: 0;
+    padding: 0 8px 0 20px;
+    display: none;
+}
+
+#gNav #gMenubar:after {
+    height: 0;
+}
+
+@media screen and (max-width: 768px){
+    #gNav #gTop,#gNav #gMenu,#gNav #gTopics,#gNav #gContact {
+        display: none;
+    }
+
+    #gNav #gMenubar {
+        display: inline-block;
+    }
+}
+
+#gNav #cart i {
+    vertical-align: top;
+}
+
+#spMenu {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    padding-top: 70px;
+    z-index: 99;
+    box-sizing: border-box;
+    display: none;
+}
+
+#spMenu .inner{
+    width: 100%;
+    height: 100%;
+}
+
+#spMenu ul {
+    letter-spacing: -.4em;
+    width: 100%;
+    height: 100%;
+}
+
+#spMenu li {
+    display: inline-block;
+    letter-spacing: normal;
+    width: 50%;
+    height: 50%;
+    text-align: center;
+    vertical-align: sub;
+    box-sizing: border-box;
+    border-right: solid #fff 2px;
+    border-bottom: solid #fff 2px;
+}
+
+#spMenu li:nth-child(2n) {
+    border-right: solid #fff 0;
+}
+
+#spMenu li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(78, 78, 78, 0.95);
+    position: relative;
+}
+
+#spMenu li a:hover {
+    background-color: #fff;
+}
+
+#spMenu li a:hover span {
+    letter-spacing: 7px;
+    color: #555555;
+}
+
+#spMenu li span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 60px;
+    margin: auto;
+    width: 130px;
+    text-align: center;
+    transition: ease-in 0.2s;
+    color: #fff;
+    font-size: 12px;
+    letter-spacing: 5px;
+}
+
+#spMenu li i {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+#arrow {
+    display: inline-block;
+    font-size: 40px;
+    position: fixed;
+    bottom: 70px;
+    right: 40px;
+    background-color: #fff;
+    border-radius: 60px;
+    color: #424242;
+    cursor: pointer;
+}
+
+#arrow a {
+    padding: 9px 16px;
+    display: block;
+}
+
+#arrow i {
+    margin-bottom: 12px;
+}
+
+@media screen and (max-width: 425px){
+    #arrow {
+        font-size: 25px;
+        bottom: 40px;
+        right: 15px;
+    }
+    #arrow i {
+        margin-bottom: 6px;
+    }
+
+    #arrow a {
+        padding: 12px 16px;
+    }
+}
+
+
+#footer {
+    padding: 150px 0;
+    border-top: solid 2px #a2a2a2;
+    background-color: #424242;
+    color: #fff;
+}
+
+#footer .nav {
+    letter-spacing: -.4em;
+    text-align: center;
+}
+
+#footer .nav li{
+    letter-spacing: normal;
+    display: inline-block;
+    margin: 0 10px;
+}
+
+#footer .nav a {
+    color: #ffffff;
+    letter-spacing: 2px;
+}
+
+#footer .nav a:hover {
+    color: #939393;
+}
+
+@media screen and (max-width: 768px){
+
+    #footer .wrap {
+        padding: 0;
+    }
+
+    #footer {
+        padding: 0;
+    }
+
+    #footer .nav li {
+        display: block;
+        border-bottom: solid 1px #a2a2a2;
+        margin: 0;
+    }
+    #footer .nav a {
+        color: #ffffff;
+        letter-spacing: 2px;
+        padding: 20px;
+        display: block;
+    }
+
+    #footer .nav a:hover {
+        color: #424242;
+        background-color: #ffffff;
+    }
+}
+
+
+#copyright {
+    background-color: #272727;
+    text-align: center;
+    color: #fff;
+    padding: 15px 0;
+    font-size: 11px;
+}
+
+#loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: block;
+    height: 100%;
+    width: 100%;
+    z-index: 999999999999;
+    background-color: #ffffff;
+}
+
+#loading .inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    height: 70px;
+}
+
+#loading .inner span {
+    font-size: 12px;
+    text-align: center;
+    margin-top: 15px;
+    display: block;
+    color: #696666;
+    letter-spacing: 1.5px;
+}
+
+.sk-cube-grid {
+  width: 40px;
+  height: 40px;
+  margin: auto;
+}
+
+.sk-cube-grid .sk-cube {
+  width: 33%;
+  height: 33%;
+  background-color: #696666;
+  float: left;
+  -webkit-animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
+          animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
+}
+.sk-cube-grid .sk-cube1 {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s; }
+.sk-cube-grid .sk-cube2 {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s; }
+.sk-cube-grid .sk-cube3 {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s; }
+.sk-cube-grid .sk-cube4 {
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s; }
+.sk-cube-grid .sk-cube5 {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s; }
+.sk-cube-grid .sk-cube6 {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s; }
+.sk-cube-grid .sk-cube7 {
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s; }
+.sk-cube-grid .sk-cube8 {
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s; }
+.sk-cube-grid .sk-cube9 {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s; }
+
+@-webkit-keyframes sk-cubeGridScaleDelay {
+  0%, 70%, 100% {
+    -webkit-transform: scale3D(1, 1, 1);
+            transform: scale3D(1, 1, 1);
+  } 35% {
+    -webkit-transform: scale3D(0, 0, 1);
+            transform: scale3D(0, 0, 1);
+  }
+}
+
+@keyframes sk-cubeGridScaleDelay {
+  0%, 70%, 100% {
+    -webkit-transform: scale3D(1, 1, 1);
+            transform: scale3D(1, 1, 1);
+  } 35% {
+    -webkit-transform: scale3D(0, 0, 1);
+            transform: scale3D(0, 0, 1);
+  }
+}
