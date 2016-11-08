@@ -7,16 +7,20 @@
     <link rel="stylesheet" href="css/common/reset.css" charset="utf-8">
     <link rel="stylesheet" href="css/common/bootstrap.min.css" charset="utf-8">
     <link rel="stylesheet" href="css/pages/index.css" charset="utf-8">
+    <!-- <script src="js/common/jQuery.js" charset="utf-8"></script> -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
     <script src="js/common/bootstrap.min.js" charset="utf-8"></script>
-    </script>
   </head>
   <body id="">
     <div class="wrap">
-    <h2>従業員管理画面</h2>
-    <a href="#"><input type="button" name="name" value="編集"></a>
-    <form class="" action="#" method="post">
+    <h3>従業員管理画面</h3>
+    <div id="manager_button">
+      <a href="#"><input type="button" class="btn btn-primary btn-lg" name="name" value="編集"></a>
+      <a href="#"><input type="button" class="btn btn-primary btn-lg" name="name" value="追加"></a>
+    </div>
       <div class="container">
-  <table class="table">
+  <table class="table"> <!-- サンプル -->
     <thead>
       <tr>
         <th></th>
@@ -39,52 +43,42 @@
           <td>近澤</td>
           <td>チカザワ</td>
           <td>16600101</td>
-          <td>男</td>
+          <td>M</td>
           <td>19991212</td>
           <td>25101212</td>
-          <td></td>
-          <td></td>
-          <td></td>
+          <td>00000000</td>
+          <td>00000000</td>
+          <td>aaaaaaaaaaaaaaaaaaaaa</td>
       </tr>
       <tr>
-        <th scope="row">2</th>
-          <td>煌木 次郎</td>
-          <td>jiro.kirameki@example.com</td>
-          <td>09033334444</td>
+        <th scope="row"><input type="checkbox" name="name" value=""></th>
+          <td>001</td>
+          <td>近澤</td>
+          <td>チカザワ</td>
+          <td>16600101</td>
+          <td>M</td>
+          <td>19991212</td>
+          <td>25101212</td>
+          <td>00000000</td>
+          <td>00000000</td>
+          <td>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</td>
       </tr>
       <tr>
-        <th scope="row">3</th>
-          <td>煌木 花子</td>
-          <td>hanako.kirameki@example.com</td>
-          <td>09055556666</td>
+        <th scope="row"><input type="checkbox" name="name" value=""></th>
+          <td>001</td>
+          <td>近澤</td>
+          <td>チカザワ</td>
+          <td>16600101</td>
+          <td>M</td>
+          <td>19991212</td>
+          <td>25101212</td>
+          <td>00000000</td>
+          <td>00000000</td>
+          <td>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</td>
       </tr>
     </tbody>
   </table>
 </div>
-      <table>
-        <thead>
-          <th></th>
-          <th>ID</th>
-          <th>氏名</th>
-          <th>フリガナ</th>
-          <th>生年月日</th>
-          <th>性別</th>
-          <th>契約開始日</th>
-          <th>契約終了日</th>
-          <th>登録日時</th>
-          <th>更新日時</th>
-        </thead>
-        <tbody>
-          <td><input type="checkbox" name="name" value=""></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tbody>
-      </table>
-
-    </form>
     </div>
   </body>
 </html>

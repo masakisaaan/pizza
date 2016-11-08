@@ -139,3 +139,9 @@
 
 #login_button {
 }
+
+/*管理者従業員表*/
+#manager_button {
+  display: inline-block;
+  margin-left: 810px;
+}
