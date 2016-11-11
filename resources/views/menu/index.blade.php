@@ -8,11 +8,11 @@
 @endsection
 
 @section('plug')
-
+    <script src="/plug/heightLine/heightLine.js" charset="utf-8"></script>
 @endsection
 
 @section('main')
-    <div class="container wrap">
+    <div class="container menu wrap">
         <div class="productsBox">
         @foreach ($products as $product)
             <div class="product">
@@ -29,6 +29,11 @@
     </div>
 @endsection
 
-@section('scrip')
-
+@section('script')
+    <script type="text/javascript">
+        $(window).on('load',function () {
+            $('.product .title').heightLine();
+            $('.text .title').heightLine();
+        });
+    </script>
 @endsection

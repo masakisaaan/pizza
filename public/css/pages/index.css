@@ -117,6 +117,10 @@
     text-align: justify;
 }
 
+/*お問い合わせフォーム*/
+
+
+
 
 /*管理者ログイン画面*/
 
@@ -167,4 +171,10 @@
     margin-right: 30px;
     width: 100%;
     float: left;
+}
+
+/*メニュー追加画面*/
+
+.form-price {
+    width: 25%;
 }
