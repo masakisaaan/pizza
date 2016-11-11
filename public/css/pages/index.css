@@ -117,9 +117,8 @@
     text-align: justify;
 }
 
+
 /*お問い合わせフォーム*/
-
-
 
 
 /*管理者ログイン画面*/
@@ -173,8 +172,22 @@
     float: left;
 }
 
+
 /*メニュー追加画面*/
 
 .form-price {
     width: 25%;
+}
+
+
+/*メニュー編集画面*/
+
+#menuedit_button {
+    text-align: center;
+}
+
+#menuadd label {
+    margin-right: 30px;
+    width: 100%;
+    float: left;
 }
