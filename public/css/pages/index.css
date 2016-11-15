@@ -191,17 +191,3 @@
     width: 100%;
     float: left;
 }
-
-/*注文確認画面*/
-thead.menu_scrollHead,tbody.menu_scrollBody{
-  display:block;
-  width: 800px;
-}
-thead.menu_scrollHead,tbody.menu_scrollBody td,th{
-  width: 800px;
-  table-layout:fixed;
-}
-tbody.menu_scrollBody{
-  overflow-y:scroll;
-  height:370px;
-}

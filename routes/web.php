@@ -33,7 +33,3 @@ Route::post('/contact','ContactController@post');
 
 
 Route::get('/test','TestsController@index');
-
-Route::get('/a', function () {    // 管理者ログイン画面
-    return view('itemconfirm/index');
-});
