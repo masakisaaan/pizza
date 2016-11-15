@@ -1,19 +1,12 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>menuedit</title>
-    <link rel="stylesheet" href="css/common/main.css" charset="utf-8">
-    <link rel="stylesheet" href="css/common/reset.css" charset="utf-8">
-    <link rel="stylesheet" href="css/common/bootstrap.min.css" charset="utf-8">
-    <link rel="stylesheet" href="css/pages/index.css" charset="utf-8">
-    <script src="js/common/bootstrap.min.js" charset="utf-8"></script>
-    </script>
-    </head>
-  <body>
-    <div class="wrap">
+@extends('template/admin')
 
+@section('title', 'メニュー追加画面')
 
+@section('css')
+    <link rel="stylesheet" href="/css/pages/index.css" media="all" title="no title">
+@endsection
+
+@section('main')
     <h1>メニュー編集画面</h1>
 
     <table class="table">
@@ -42,5 +35,5 @@
       <button type="button" class="btn btn-primary btn-lg"name="button">確認画面へ</button>
       </div>
     </div>
-  </body>
-</html>
+    
+    @endsection

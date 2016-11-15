@@ -5,12 +5,13 @@
    body {
        position: relative;
        background-color: #ffffff;
+       font-family: monospace;
    }
    .page {
        color: #333333;
        font-size: 14px;
        line-height: 1.5;
-       font-family:'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
+       font-family: monospace;
    }
 
    em {
@@ -136,7 +137,7 @@
     padding-top: 72px;
     background-image: url(../../images/common/background01.png);
     background-position: center;
-    background-size: cover;
+    background-size: contain;
 }
 
 #header {
@@ -157,6 +158,7 @@
     position: absolute;
     top: -8px;
     right: 10px;
+    font-size: 15px;
 }
 
 #gNav ul {
@@ -190,7 +192,7 @@
 #gNav a {
     display: block;
     color: #484848;
-    letter-spacing: 2px;
+    letter-spacing: 5px;
     font-weight: 600;
     padding: 10px 15px;
 }
@@ -213,6 +215,7 @@
 #gNav #cart a {
     padding: 8px 9px 8px 8px;
     transition: 0.5s;
+    position: relative;
 }
 
 #gNav #cart a:hover {
@@ -378,6 +381,8 @@
 #footer .nav a {
     color: #ffffff;
     letter-spacing: 2px;
+    letter-spacing: 5px;
+    font-size: 15px;
 }
 
 #footer .nav a:hover {
@@ -449,6 +454,18 @@
     display: block;
     color: #696666;
     letter-spacing: 1.5px;
+}
+
+#cartCount {
+    display: none;
+    position: absolute;
+    font-size: 11px;
+    background-color: #dcdcdc;
+    text-align: center;
+    padding: 5px 1px 4px 6px;
+    border-radius: 20px;
+    top: -2px;
+    right: -1px;
 }
 
 .sk-cube-grid {

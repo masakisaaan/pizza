@@ -1,18 +1,13 @@
-<!DOCTYPE html>
-<html>
-  <head>
-  <meta charset="utf-8">
-  <title>login</title>
-  <link rel="stylesheet" href="css/common/main.css" charset="utf-8">
-  <link rel="stylesheet" href="css/common/reset.css" charset="utf-8">
-  <link rel="stylesheet" href="css/common/bootstrap.min.css" charset="utf-8">
-  <link rel="stylesheet" href="css/pages/index.css" charset="utf-8">
-  <script src="js/common/bootstrap.min.js" charset="utf-8"></script>
-  </script>
-  </head>
-  <body>
-    <div class="wrap">
-      <h1 id="menumanagement_title">メニュー管理画面</h1>
+@extends('template/admin')
+
+@section('title', 'メニュー追加画面')
+
+@section('css')
+    <link rel="stylesheet" href="/css/pages/index.css" media="all" title="no title">
+@endsection
+
+@section('main')
+      <h1>メニュー管理画面</h1>
       <div id="menu_button">
         <button type="button" class="btn btn-primary btn-lg"name="button">編集</button>
         <button type="button" class="btn btn-primary btn-lg"name="button">削除</button>
@@ -66,6 +61,4 @@
         </table>
         </div>
     </div>
-
-  </body>
-</html>
+@endsection

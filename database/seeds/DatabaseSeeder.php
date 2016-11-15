@@ -16,6 +16,7 @@ use App\State;
 use App\Order;
 use App\OrderDetail;
 use App\Campaign;
+use App\User;
 
 class DatabaseSeeder extends Seeder
 {
@@ -39,8 +40,76 @@ class DatabaseSeeder extends Seeder
         $this->call('OrdersDetailsTableSeeder');
         $this->call('CouponsMasterSeeder');
         $this->call('CampaignesMasterSeeder');
+        $this->call('UsersSeeder');
 
         Model::reguard();
+    }
+}
+
+//会員
+class UsersSeeder extends Seeder
+{
+
+    public function run()
+    {
+        DB::table('users')->delete();
+
+        User::create([
+            'name' => 'admin',
+            'kana' => 'アドミニ',
+            'email' => 'admin@oic.jp',
+            'password' => bcrypt('root'),
+            'postel' => 5900014,
+            'address1' => '大阪府堺市堺区登坂町',
+            'address2' => '8-5',
+            'address3' => '910号室',
+            'phone' => '09064325841',
+            'gender_id' => 1,
+            'birthday' => 19961111,
+            'authority_id' => 1,
+        ]);
+        User::create([
+            'name' => '兵頭もっぷ',
+            'kana' => 'ヒョウドウモップ',
+            'email' => 'B5123@oic.jp',
+            'password' => bcrypt('19970221'),
+            'postel' => 5320003,
+            'address1' => '大阪府大阪市淀川区宮原町',
+            'address2' => '2-8-1',
+            'address3' => '312号室',
+            'phone' => '012345678910',
+            'gender_id' => 1,
+            'birthday' => 19970221,
+            'authority_id' => 3,
+        ]);
+        User::create([
+            'name' => '濱田真旗',
+            'kana' => 'ハマダマサキ',
+            'email' => 'B5163@oic.jp',
+            'password' => bcrypt('djmasaki'),
+            'postel' => 5550011,
+            'address1' => '大阪府大阪市大正区北恩加島',
+            'address2' => '2-8-1',
+            'address3' => null,
+            'phone' => '012345678911',
+            'gender_id' => 1,
+            'birthday' => 19960607,
+            'authority_id' => 2,
+        ]);
+        User::create([
+            'name' => '近沢邦彦',
+            'kana' => 'チカザワクニヒコ',
+            'email' => 'B5164@oic.jp',
+            'password' => bcrypt('zawatika'),
+            'postel' => 5550012,
+            'address1' => '大阪府大阪市大正区北恩加島',
+            'address2' => '2-8-2',
+            'address3' => null,
+            'phone' => '012345678912',
+            'gender_id' => 1,
+            'birthday' => 19960607,
+            'authority_id' => 4,
+        ]);
     }
 }
 
@@ -156,10 +225,16 @@ class AuthoritiesMasterSeeder extends Seeder
         DB::table('authorities_master')->delete();
 
         Authority::create([
-            'authority_name' => 'administrator'
+            'authority_name' => 'Administrator'
         ]);
         Authority::create([
-            'authority_name' => 'employee'
+            'authority_name' => 'AuthorityEmployee'
+        ]);
+        Authority::create([
+            'authority_name' => 'Employee'
+        ]);
+        Authority::create([
+            'authority_name' => 'GeneralMember'
         ]);
     }
 }

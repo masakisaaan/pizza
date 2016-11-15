@@ -17,16 +17,16 @@ class EmployeesController extends Controller
 {
     //  従業員一覧ページ
     public function employeeList()  {
-        return view('employee.list');
+        return view('pizzzzza/employee.list');
     }
 
     //  従業員編集ページ
     public function employeeEdit()  {
-        return view('employe.edit');
+        return view('pizzzzza/employee.edit');
     }
 
     //  従業員追加ページ
     public function employeeAdd()  {
-        return view('employee.add');
+        return view('pizzzzza/employee.add');
     }
 }

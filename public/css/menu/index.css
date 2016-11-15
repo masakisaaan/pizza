@@ -1,9 +1,31 @@
-
 .container.menu.wrap {
     padding: 100px 0;
 }
 .productsBox {
     letter-spacing: -.4em;
+}
+.productsBox h2 {
+    text-align: center;
+    letter-spacing: 8px;
+    font-size: 40px;
+    margin-bottom: 80px;
+    color: #656565;
+    position: relative;
+}
+.productsBox h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    background: #656565;
+    height: 3px;
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    margin-left: -25px;
+}
+
+.productsBox h2:nth-child(n+1) {
+    margin-top: 50px;
 }
 
 .product {
@@ -14,29 +36,103 @@
     background-color: #424242;
     color: #fff;
     margin: 0 1.666666667% 30px;
-    font-family: "ＭＳ Ｐ明朝", "MS PMincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", serif;
+    font-family: monospace;
 
 }
-
 .product .title {
     font-size: 18px;
     box-sizing: border-box;
-    padding: 10px 5px;
+    padding: 10px;
     line-height: 1.5;
     color: #ebcb6d;
-    letter-spacing: 1px;
+    letter-spacing: 3px;
 }
-
 .product .praice {
-    padding: 0 5px;
+    padding: 0 10px;
     letter-spacing: 1.5px;
     margin-bottom: 15px;
     font-size: 17px;
     text-align: right;
 }
-
 .product .text {
-    padding: 0 5px;
+    padding: 0 10px;
     line-height: 1.5;
     font-size: 14px;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+.product .btn {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.product .btn span {
+    position: relative;
+    display: inline-block;
+    width: 20%;
+    border: solid 1px #bfbfbf;
+    background-color: #fff;
+    vertical-align: top;
+
+}
+.product .btn span:after {
+    content: "▼";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    margin-right: 5px;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    color: #424242;
+}
+.product .btn option,
+.product .btn select {
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    padding: 0;
+    margin: 0;
+    text-indent: 1em;
+    background-color: transparent;
+    border: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+}
+
+.form-bottom {
+    width: 60%;
+    display: inline-block;
+    background-color: #ffffff;
+    color: #424242;
+    padding: 9.5px;
+    cursor: pointer;
+    font-family: monospace;
+    letter-spacing: 5px;
+    margin-left: 2%;
+}
+
+.form-bottom:hover {
+    opacity: 0.8;
+}
+
+
+@media screen and (max-width: 763px){
+    .product {
+        width: 100%;
+        margin: 0;
+    }
+    .product .image {
+        text-align: center;
+
+    }
+    .product .image img {
+        width: 100%;
+    }
+
+    .product .btn {
+        margin-bottom: 30px;
+    }
 }

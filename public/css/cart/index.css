@@ -1,0 +1,89 @@
+
+#cart.wrap {
+    padding: 100px 0;
+}
+
+h2 {
+    text-align: center;
+    letter-spacing: 8px;
+    font-size: 40px;
+    margin-bottom: 80px;
+    color: #656565;
+    position: relative;
+}
+h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    background: #656565;
+    height: 3px;
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    margin-left: -25px;
+}
+
+.empty {
+    text-align: center;
+}
+
+.empty .inner {
+    display: inline-block;
+    font-size: 20px;
+    letter-spacing: 5px;
+    background-color: #c1c1c1;
+    color: #000000;
+    padding: 60px;
+}
+
+.empty i {
+    font-size: 125px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    text-align: center;
+    margin-top: 50px;
+}
+.btn .inner {
+    display: inline-block;
+    width: 200px;
+    font-size: 15px;
+}
+
+.btn .inner a {
+    display: block;
+    padding: 20px;
+    color: #fff;
+    background-color: #424242;
+    letter-spacing: 5px;
+    transition: ease-in 0.2s;
+    border: solid 1px #424242
+}
+
+.btn .inner a:hover {
+    letter-spacing: 6px;
+    opacity: 0.8;
+}
+
+.btn .inner.special {
+    margin-right: 2%;
+}
+
+.btn .inner.special a {
+    background-color: #fff;
+    color: #424242;
+    box-sizing: border-box;
+}
+
+.clear.btn {
+    text-align: right;
+    cursor: pointer;
+}
+
+.clear.btn a {
+    text-align: center;
+    background-color: #888888;
+    font-size: 12px;
+    border: none;
+}
