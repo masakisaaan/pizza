@@ -27,8 +27,7 @@ class RegisterRequest extends FormRequest
             //
             'name' => 'required|max:50',
             'name_katakana' => 'required|max:100',
-            'postal1' => 'required|size:3|string',
-            'postal2' => 'required|size:4|string',
+            'postal' => 'required|size:7|string',
             'address1' => 'required|max:255',
             'address2' => 'required|max:255',
             'address3' => 'max:255',
